@@ -1,0 +1,401 @@
+html {
+    background-color: rgb(17, 17, 49);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(91, 91, 139);
+}
+
+#dipositonHead {
+    display: flex;
+    justify-content: center;
+
+}
+
+header {
+    /* background-colo: rgb(46, 35, 25); */
+    top: 15px;
+    color: rgb(219, 181, 13);
+    width: 98%;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgb(61, 61, 61), 0px -60px 0px rgba(255, 255, 255, 0);
+    position: fixed;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: 10000;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0);
+    /* Fond semi-transparent pour atténuer le flou */
+    backdrop-filter: blur(5px);
+    /* Applique un flou au header */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(67, 73, 72, 0.411);
+    /* Fond semi-transparent pour atténuer le flou */
+    backdrop-filter: blur(1px);
+    /* Applique un flou au pseudo-élément */
+    z-index: -1;
+    /* Place le pseudo-élément en arrière-plan pour que les éléments au-dessus restent lisibles */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 140%;
+}
+
+#logo {
+    width: 50px;
+    margin-left: 50px;
+}
+
+#sousNav {
+    display: block;
+}
+
+.item {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 80px;
+    text-decoration: none;
+    color: rgb(255, 139, 7);
+    font-size: 100%;
+    font-weight: bold;
+    cursor: alias;
+}
+
+a {
+    text-decoration: none;
+}
+
+#menu {
+    display: none;
+}
+
+#menuButton,
+#noMenuButton {
+    display: none;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.sectionHero {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.AipordPrentation {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.AipordPrentationText2 {
+    background-clip: text;
+    background: linear-gradient(to right, red, orange, green);
+}
+
+.airpods-case {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #d3cfcf;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.lid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #aaa8a8;
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.left-airpod,
+.right-airpod {
+    position: absolute;
+    top: 70px;
+    width: 60px;
+    height: 60px;
+    left: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.right-airpod {
+    left: 175px;
+}
+
+.sectionDetail {
+    margin-top: 150px;
+    padding: 100px;
+    height: 50vh;
+    background-color: rgba(31, 31, 63, 0.527);
+
+}
+
+.sectionDetailText1 {
+    margin-left: -150px;
+    color: rgb(255, 139, 7);
+    font-family: cursive;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.sectionDetailText2 {
+    color: rgb(245, 239, 232);
+    font-family: sans-serif;
+    font-size: 19px;
+}
+
+.sectionDetailText3 {
+    color: rgb(184, 141, 245);
+    font-family: cursive;
+    font-size: 19px;
+}
+
+.sectionDemo {
+    padding: 100px;
+    height: 50vh;
+    background-color: rgb(43, 43, 54);
+
+}
+
+#imgAirpodOpen {
+    width: 600px;
+    height: 300px;
+    animation: hb 10s infinite ease-in-out;
+}
+
+#imgAirpodOreilR,
+#imgAirpodOreilL {
+    display: none;
+    width: 200px;
+    height: 250px;
+    transition: hb 0.3s linear infinely ease-in-out;
+    /* Ajout d'une transition pour une animation en douceur */
+    animation: hb 4s infinite ease-in-out;
+}
+
+.sectionConnection {
+    padding: 30px;
+
+}
+
+.sectConnText1 {
+    color: aliceblue;
+    font-family: cursive;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#imgconnectAirPhone {
+    width: 500px;
+    height: 350px;
+    transition: hb 0.3s linear infinely ease-in-out;
+    /* Ajout d'une transition pour une animation en douceur */
+    animation: hb 4s infinite ease-in-out;
+
+}
+
+#connectButton {
+    margin-top: 100px;
+    height: 40px;
+    padding: 10px, 20px, 10px, 20px;
+    border-radius: 20px;
+    border-color: aqua;
+    color: #5f5c5c;
+    font-weight: 500;
+}
+
+#connectButton:hover {
+    background-color: aquamarine;
+    transition: 2s;
+}
+
+.connectedDisplay{
+    margin-top: 50px;
+    width: 50%;
+    padding: 30px;
+    border-radius: 30px;
+    font-family: cursive;
+    font-size: 32px;
+    color: blanchedalmond;
+    background-color: rgba(117, 112, 45, 0.74);;    
+    overflow: hidden;
+    filter: blur(0px);
+    z-index: 1000;
+}
+.connectedDisplay::before{
+    content: "MMMMMMMMMMMMMMMMMMMMMM br MMMmmmmmmmmmmmmmmmmmmmm br mmmmmmmmmmmmmmmmmmmmmmmmm br MMMMMMMMMMMMMMMMMMMMMM br MMMmmmmmmmmmmmmmmmmmmmm br mmmmmmmmmmmmmmmmmmmmmmmmm";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(82, 45, 117, 0.164);
+    color: rgb(175, 90, 255);
+    font-weight: bold;
+    filter: blur(7px);
+    z-index: -1;
+}
+.connectedDisplay::after{
+    content: " MMMMMMMMMMMMMMMMMMMMMMM br MMMMMMMMMMMMMMMMMMMMMMM br MMMMMMMMMMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"; 
+    position: absolute; 
+    top:50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(90, 134, 255);
+    /* background-color: rgba(82, 45, 117, 0.61); */
+    filter: blur(7px);
+    z-index: -1;
+}
+
+
+
+@keyframes hb {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    /* 25%{transform: translateY(10px);} */
+    50% {
+        transform: translateY(20px);
+    }
+
+    /* 75%{transform: translateY(10px);} */
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+footer {
+    color: rgb(146, 136, 123);
+    padding: 50px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    background-color: rgb(17, 17, 49);
+    font-size: 20px;
+}
+
+.footer {
+    display: flex;
+    gap: 10px;
+}
+
+h3 {
+    color: darkorange;
+}
+
+
+/* Styles pour les écrans de petite taille (mobiles) */
+@media only screen and (max-width: 1267px) {
+    #menu-button {
+        display: block;
+        font-size: 100%;
+        padding: 15px;
+        float: right;
+        background-color: rgb(143, 130, 72);
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 20px;
+    }
+
+    #menu {
+        display: none;
+        top: 0;
+        float: right;
+        padding: 40px;
+        width: 200px;
+        background-color: rgba(114, 83, 16, 0.945);
+        box-shadow: 0px 20px 100px rgb(14, 171, 192);
+        transition: left 0.3s ease-in-out;
+    }
+
+    #menu.open {
+        display: inline;
+        position: fixed;
+        right: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #sousNav {
+        display: none;
+    }
+
+    .item {
+        width: 20%;
+        line-height: 80px;
+        font-size: 150%;
+        font-weight: bold;
+    }
+
+    .sectionHero {
+        padding-top: 170px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sectionDetailText1 {
+        margin-left: 0px;
+    }
+
+    #imgAirpodOreilR,
+    #imgAirpodOreilL {
+        width: 150px;
+        height: 200px;
+    }
+
+    #connectButton {
+        margin-top: 20px;
+        height: 40px;
+        padding: 10px, 20px, 10px, 20px;
+        border-radius: 20px;
+    }
+
+    .connectedDisplay{
+        width: 80%;
+        font-size: 26px;
+    }
+}
